@@ -5,6 +5,28 @@ import productPulseras from "@/assets/product-pulseras.jpg";
 import productLlaveros from "@/assets/product-llaveros.jpg";
 import productColgantes from "@/assets/product-colgantes.jpg";
 
+// Pulseras gallery imports
+import pulsera1 from "@/assets/pulseras/pulsera-1.jpg";
+import pulsera2 from "@/assets/pulseras/pulsera-2.jpg";
+import pulsera3 from "@/assets/pulseras/pulsera-3.jpg";
+import pulsera4 from "@/assets/pulseras/pulsera-4.jpg";
+import pulsera5 from "@/assets/pulseras/pulsera-5.jpg";
+import pulsera6 from "@/assets/pulseras/pulsera-6.jpg";
+import pulsera7 from "@/assets/pulseras/pulsera-7.jpg";
+import pulsera8 from "@/assets/pulseras/pulsera-8.jpg";
+import pulsera9 from "@/assets/pulseras/pulsera-9.jpg";
+import pulsera10 from "@/assets/pulseras/pulsera-10.jpg";
+import pulsera11 from "@/assets/pulseras/pulsera-11.jpg";
+import pulsera12 from "@/assets/pulseras/pulsera-12.jpg";
+import pulsera13 from "@/assets/pulseras/pulsera-13.jpg";
+import pulsera14 from "@/assets/pulseras/pulsera-14.jpg";
+import pulsera15 from "@/assets/pulseras/pulsera-15.jpg";
+import pulsera16 from "@/assets/pulseras/pulsera-16.jpg";
+import pulsera17 from "@/assets/pulseras/pulsera-17.jpg";
+import pulsera18 from "@/assets/pulseras/pulsera-18.jpg";
+import pulsera19 from "@/assets/pulseras/pulsera-19.jpg";
+import pulsera20 from "@/assets/pulseras/pulsera-20.jpg";
+
 const products = [
   {
     name: "Collares",
@@ -24,12 +46,26 @@ const products = [
     description: "Pulseras de rosario y cuentas con detalles religiosos llenos de significado.",
     image: productPulseras,
     gallery: [
-      { src: productPulseras, label: "Pulsera rosario azul" },
-      { src: productPulseras, label: "Pulsera cuentas madera" },
-      { src: productPulseras, label: "Pulsera cruz trenzada" },
-      { src: productPulseras, label: "Pulsera medalla milagrosa" },
-      { src: productPulseras, label: "Pulsera perlas blancas" },
-      { src: productPulseras, label: "Pulsera San Judas" },
+      { src: pulsera1, label: "Pulseras de hilo trenzado con cruz" },
+      { src: pulsera2, label: "Pulseras de nudos colores" },
+      { src: pulsera3, label: "Pulseras de nudos variados" },
+      { src: pulsera4, label: "Pulseras de cuentas con cruz" },
+      { src: pulsera5, label: "Pulsera cordón gris con cruz" },
+      { src: pulsera6, label: "Pulsera cordón verde con cruz" },
+      { src: pulsera7, label: "Pulsera cordón amarillo con cruz" },
+      { src: pulsera8, label: "Pulsera cordón azul con cruz" },
+      { src: pulsera9, label: "Pulsera cordón beige con cruz" },
+      { src: pulsera10, label: "Pulsera cordón dorado con cruz" },
+      { src: pulsera11, label: "Pulsera cordón lila con cruz" },
+      { src: pulsera12, label: "Pulsera cordón negro con ángel" },
+      { src: pulsera13, label: "Pulsera con medalla Padre Nuestro" },
+      { src: pulsera14, label: "Pulseras cordón con medalla Virgen" },
+      { src: pulsera15, label: "Pulseras naranja y amarilla Virgen" },
+      { src: pulsera16, label: "Pulseras roja y amarilla Virgen" },
+      { src: pulsera17, label: "Pulseras hilo con medalla cruz" },
+      { src: pulsera18, label: "Pulsera terciopelo verde Virgen" },
+      { src: pulsera19, label: "Pulsera terciopelo empaquetada" },
+      { src: pulsera20, label: "Pulsera terciopelo azul Virgen" },
     ],
   },
   {
@@ -124,7 +160,7 @@ const ProductsSection = () => {
             key={`gallery-${product.name}`}
             className={`overflow-hidden transition-all duration-500 ease-in-out ${
               expanded === product.name
-                ? "max-h-[2000px] opacity-100 mt-10"
+                ? "max-h-[4000px] opacity-100 mt-10"
                 : "max-h-0 opacity-0 mt-0"
             }`}
           >
@@ -132,10 +168,10 @@ const ProductsSection = () => {
               <h3 className="font-display text-2xl font-semibold text-foreground mb-6 text-center">
                 {product.name}
                 <span className="block text-sm font-body font-normal text-muted-foreground mt-1">
-                  Pulsa en cualquier imagen para ver más detalles
+                  Galería de productos
                 </span>
               </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {product.gallery.map((item, idx) => (
                   <div
                     key={idx}
