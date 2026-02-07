@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import productCollares from "@/assets/product-collares.jpg";
 import productPulseras from "@/assets/product-pulseras.jpg";
 import productLlaveros from "@/assets/product-llaveros.jpg";
 import productColgantes from "@/assets/product-colgantes.jpg";
@@ -27,20 +26,14 @@ import pulsera18 from "@/assets/pulseras/pulsera-18.jpg";
 import pulsera19 from "@/assets/pulseras/pulsera-19.jpg";
 import pulsera20 from "@/assets/pulseras/pulsera-20.jpg";
 
+// Llaveros gallery imports
+import llavero1 from "@/assets/llaveros/llavero-1.jpg";
+import llavero2 from "@/assets/llaveros/llavero-2.jpg";
+
+// Colgantes gallery imports
+import colgante1 from "@/assets/colgantes/colgante-1.jpg";
+
 const products = [
-  {
-    name: "Collares",
-    description: "Cruces, medallas y símbolos de fe en delicados collares artesanales.",
-    image: productCollares,
-    gallery: [
-      { src: productCollares, label: "Collar con cruz dorada" },
-      { src: productCollares, label: "Collar medalla Virgen" },
-      { src: productCollares, label: "Collar rosario perlas" },
-      { src: productCollares, label: "Collar San Benito" },
-      { src: productCollares, label: "Collar cruz plateada" },
-      { src: productCollares, label: "Collar ángel guardián" },
-    ],
-  },
   {
     name: "Pulseras",
     description: "Pulseras de rosario y cuentas con detalles religiosos llenos de significado.",
@@ -73,12 +66,8 @@ const products = [
     description: "Llaveros con medallas y cruces, un recordatorio diario de fe.",
     image: productLlaveros,
     gallery: [
-      { src: productLlaveros, label: "Llavero cruz madera" },
-      { src: productLlaveros, label: "Llavero ángel resina" },
-      { src: productLlaveros, label: "Llavero medalla San Cristóbal" },
-      { src: productLlaveros, label: "Llavero rosario mini" },
-      { src: productLlaveros, label: "Llavero Virgen del Carmen" },
-      { src: productLlaveros, label: "Llavero cruz metal" },
+      { src: llavero1, label: "Llaveros Virgen con cinta" },
+      { src: llavero2, label: "Llavero cruz Padre Nuestro" },
     ],
   },
   {
@@ -86,12 +75,7 @@ const products = [
     description: "Ángeles, santos y símbolos sagrados en pequeños colgantes únicos.",
     image: productColgantes,
     gallery: [
-      { src: productColgantes, label: "Colgante ángel dorado" },
-      { src: productColgantes, label: "Colgante Sagrado Corazón" },
-      { src: productColgantes, label: "Colgante cruz cristal" },
-      { src: productColgantes, label: "Colgante Virgen María" },
-      { src: productColgantes, label: "Colgante paloma espíritu" },
-      { src: productColgantes, label: "Colgante mano de Fátima" },
+      { src: colgante1, label: "Colgantes Virgen María" },
     ],
   },
 ];
@@ -119,7 +103,7 @@ const ProductsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {products.map((product) => (
             <div key={product.name} className="flex flex-col">
               <button
