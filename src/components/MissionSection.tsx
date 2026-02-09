@@ -1,3 +1,5 @@
+import logoSeul from "@/assets/logo-seul-2027.jpeg";
+
 const MissionSection = () => {
   return (
     <section className="py-24 px-6 bg-gradient-warm">
@@ -8,13 +10,22 @@ const MissionSection = () => {
             ✝
           </div>
 
+          <img
+            src={logoSeul}
+            alt="Logotipo oficial JMJ Seúl 2027"
+            className="w-28 h-28 object-contain mx-auto mb-6 rounded-lg"
+          />
+
           <p className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4">
             Nuestra misión
           </p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
             Camino al encuentro con el{" "}
             <span className="text-gradient-gold">Papa en Seúl 2027</span>
           </h2>
+          <p className="font-display text-xl md:text-2xl italic text-primary mb-6">
+            «¡Tened valor! Yo he vencido al mundo»
+          </p>
           <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
             Cada compra que realizas nos acerca más a nuestro sueño: asistir al
             encuentro con el Santo Padre en Seúl, Corea del Sur, en 2027. Tu

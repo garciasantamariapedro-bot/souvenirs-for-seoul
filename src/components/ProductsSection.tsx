@@ -32,6 +32,9 @@ import llavero2 from "@/assets/llaveros/llavero-2.jpg";
 
 // Colgantes gallery imports
 import colgante1 from "@/assets/colgantes/colgante-1.jpg";
+import colgante2 from "@/assets/colgantes/colgante-2.jpg";
+import colgante3 from "@/assets/colgantes/colgante-3.jpg";
+import colgante4 from "@/assets/colgantes/colgante-4.jpg";
 
 const products = [
   {
@@ -76,6 +79,9 @@ const products = [
     image: productColgantes,
     gallery: [
       { src: colgante1, label: "Colgantes Virgen María" },
+      { src: colgante2, label: "Colgante cordón lila con medalla" },
+      { src: colgante3, label: "Colgante cordón azul Virgen" },
+      { src: colgante4, label: "Colgante cadena plateada Virgen" },
     ],
   },
 ];
