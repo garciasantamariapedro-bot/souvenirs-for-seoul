@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Mail } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -15,15 +15,24 @@ const ContactSection = () => {
           un pedido especial para tu evento.
         </p>
 
-        <a
-          href="https://wa.me/?text=Hola%2C%20me%20interesan%20los%20detalles%20religiosos"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-gradient-gold text-primary-foreground font-body font-bold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-warm-lg"
-        >
-          <MessageCircle className="w-6 h-6" />
-          Escríbenos por WhatsApp
-        </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://wa.me/34690324101?text=Hola%2C%20me%20interesan%20los%20detalles%20religiosos"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-gradient-gold text-primary-foreground font-body font-bold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-warm-lg"
+          >
+            <MessageCircle className="w-6 h-6" />
+            Escríbenos por WhatsApp
+          </a>
+          <a
+            href="mailto:caminoSeul2027@gmail.com"
+            className="inline-flex items-center gap-3 bg-card text-foreground font-body font-bold px-8 py-4 rounded-lg text-lg hover:bg-muted transition-colors shadow-warm border border-border"
+          >
+            <Mail className="w-6 h-6" />
+            Envíanos un email
+          </a>
+        </div>
       </div>
     </section>
   );
