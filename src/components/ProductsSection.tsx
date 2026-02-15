@@ -37,6 +37,9 @@ import colgante3 from "@/assets/colgantes/colgante-3.jpg";
 import colgante4 from "@/assets/colgantes/colgante-4.jpg";
 import colgante5 from "@/assets/colgantes/colgante-5.jpg";
 import colgante6 from "@/assets/colgantes/colgante-6.jpg";
+import colgante7 from "@/assets/colgantes/colgante-7.jpg";
+import colgante8 from "@/assets/colgantes/colgante-8.jpg";
+import colgante9 from "@/assets/colgantes/colgante-9.jpg";
 
 const products = [
   {
@@ -86,6 +89,9 @@ const products = [
       { src: colgante4, label: "Colgante Virgen cuentas blancas" },
       { src: colgante5, label: "Colgante cruz esmalte azul" },
       { src: colgante6, label: "Colgante cruz esmalte blanco" },
+      { src: colgante7, label: "Colgante Virgen cordón lila dorado" },
+      { src: colgante8, label: "Colgante Virgen cordón azul dorado" },
+      { src: colgante9, label: "Colgante Virgen cadena plateada" },
     ],
   },
 ];
