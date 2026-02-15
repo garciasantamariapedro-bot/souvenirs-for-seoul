@@ -17,13 +17,13 @@ const ContactSection = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://wa.me/34690324101?text=Hola%2C%20me%20interesan%20los%20detalles%20religiosos"
+            href="https://t.me/pedidos_DetallesFe_bot"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gradient-gold text-primary-foreground font-body font-bold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-warm-lg"
           >
             <MessageCircle className="w-6 h-6" />
-            Escríbenos por WhatsApp
+            Escríbenos por Telegram
           </a>
           <a
             href="mailto:caminoSeul2027@gmail.com"
