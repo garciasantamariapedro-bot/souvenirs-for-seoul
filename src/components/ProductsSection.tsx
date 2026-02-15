@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import productPulseras from "@/assets/product-pulseras.jpg";
 import productLlaveros from "@/assets/product-llaveros.jpg";
 import productColgantes from "@/assets/product-colgantes.jpg";
@@ -35,6 +35,8 @@ import colgante1 from "@/assets/colgantes/colgante-1.jpg";
 import colgante2 from "@/assets/colgantes/colgante-2.jpg";
 import colgante3 from "@/assets/colgantes/colgante-3.jpg";
 import colgante4 from "@/assets/colgantes/colgante-4.jpg";
+import colgante5 from "@/assets/colgantes/colgante-5.jpg";
+import colgante6 from "@/assets/colgantes/colgante-6.jpg";
 
 const products = [
   {
@@ -78,16 +80,19 @@ const products = [
     description: "Ángeles, santos y símbolos sagrados en pequeños colgantes únicos.",
     image: productColgantes,
     gallery: [
-      { src: colgante1, label: "Colgantes Virgen María" },
-      { src: colgante2, label: "Colgante cordón lila con medalla" },
-      { src: colgante3, label: "Colgante cordón azul Virgen" },
-      { src: colgante4, label: "Colgante cadena plateada Virgen" },
+      { src: colgante1, label: "Colgante medalla Virgen dorada" },
+      { src: colgante2, label: "Colgante Virgen Milagrosa negro" },
+      { src: colgante3, label: "Colgante Virgen Guadalupe dorado" },
+      { src: colgante4, label: "Colgante Virgen cuentas blancas" },
+      { src: colgante5, label: "Colgante cruz esmalte azul" },
+      { src: colgante6, label: "Colgante cruz esmalte blanco" },
     ],
   },
 ];
 
 const ProductsSection = () => {
   const [expanded, setExpanded] = useState<string | null>(null);
+  const [lightbox, setLightbox] = useState<{ src: string; label: string } | null>(null);
 
   const toggleExpand = (name: string) => {
     setExpanded((prev) => (prev === name ? null : name));
@@ -163,9 +168,10 @@ const ProductsSection = () => {
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {product.gallery.map((item, idx) => (
-                  <div
+                  <button
                     key={idx}
-                    className="group/item rounded-lg overflow-hidden bg-background shadow-sm hover:shadow-warm transition-all duration-300"
+                    onClick={() => setLightbox(item)}
+                    className="group/item rounded-lg overflow-hidden bg-background shadow-sm hover:shadow-warm transition-all duration-300 text-left cursor-pointer"
                   >
                     <div className="aspect-square overflow-hidden">
                       <img
@@ -180,13 +186,41 @@ const ProductsSection = () => {
                         {item.label}
                       </p>
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Lightbox popup */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <div
+            className="relative max-w-2xl w-full bg-card rounded-2xl overflow-hidden shadow-warm-lg"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setLightbox(null)}
+              className="absolute top-3 right-3 z-10 bg-background/80 backdrop-blur-sm rounded-full p-2 hover:bg-background transition-colors"
+            >
+              <X className="w-5 h-5 text-foreground" />
+            </button>
+            <img
+              src={lightbox.src}
+              alt={lightbox.label}
+              className="w-full max-h-[80vh] object-contain bg-background"
+            />
+            <div className="p-4 text-center">
+              <p className="font-body text-foreground">{lightbox.label}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
